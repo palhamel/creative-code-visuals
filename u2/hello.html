@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <!-- HTML canvas to draw on: -->
+    <canvas width="600" height="600"> </canvas>
+    <script >
+      const canvas = document.querySelector('canvas');
+
+      // Get the canvas context:  
+      const ctx = canvas.getContext('2d');
+
+      ctx.fillRect(100, 100, 400, 400);
+      ctx.fillStyle = '#FF0000';
+      ctx.fillRect(200, 200, 200, 200);
+      ctx.fillStyle = '#00FF00';
+      ctx.fillRect(300, 300, 100, 100);
+      ctx.fillStyle = '#0000FF';
+      ctx.fillRect(400, 400, 50, 50);
+
+
+
+      // Draw a circle: 
+      // ctx.beginPath();
+      // ctx.arc(300, 300, 200, 0, Math.PI * 2, false);
+      // ctx.stroke();
+
+
+
+    </script>
+  </body>
+</html>
