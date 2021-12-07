@@ -2,29 +2,74 @@
   <body>
     <!-- HTML canvas to draw on: -->
     <canvas width="600" height="600"> </canvas>
-    <script >
-      const canvas = document.querySelector('canvas');
+    <script>
+      const canvas = document.querySelector('canvas')
+      // Get the canvas context:
+      const ctx = canvas.getContext('2d')
 
-      // Get the canvas context:  
-      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#4169E1'
+      // ctx.fillRect(100, 100, 400, 400)
 
-      ctx.fillRect(100, 100, 400, 400);
-      ctx.fillStyle = '#FF0000';
-      ctx.fillRect(200, 200, 200, 200);
-      ctx.fillStyle = '#00FF00';
-      ctx.fillRect(300, 300, 100, 100);
-      ctx.fillStyle = '#0000FF';
-      ctx.fillRect(400, 400, 50, 50);
+      // ctx.fillStyle = '#FF0000'
+      // ctx.fillRect(200, 200, 200, 200)
 
+      // ctx.fillStyle = '#00FF00'
+      // ctx.fillRect(300, 300, 100, 100)
 
+      // ctx.fillStyle = '#0000FF'
+      // ctx.fillRect(400, 400, 50, 50)
 
-      // Draw a circle: 
-      // ctx.beginPath();
-      // ctx.arc(300, 300, 200, 0, Math.PI * 2, false);
-      // ctx.stroke();
+      // ctx.lineWidth = 7
+      // ctx.strokeStyle = '#FFB247'
+      // ctx.beginPath()
+      // ctx.rect(100, 100, 400, 400)
+      // ctx.stroke()
 
+      // Draw a circle:
+      // ctx.beginPath()
+      // ctx.arc(300, 300, 180, 0, Math.PI * 2, false)
+      // ctx.lineWidth = 4
+      // ctx.strokeStyle = '#E81BB6'
+      // ctx.stroke()
 
+      // Draw patterns with a loop:
+      for (let i = 0; i < 5; i++) {
+        // more rows:
+        for (let j = 0; j < 5; j++) {
+          const width = 60
+          const height = 60
+          const gap = 20
+          const x = 100 + (width + gap) * i
+          const y = 100 + (height + gap) * j
 
+          ctx.beginPath()
+          ctx.rect(x, y, width, height)
+          // ctx.lineWidth = 2
+          ctx.strokeStyle = '#E81BB6'
+          ctx.stroke()
+
+          // Small square conditional drawing:
+          if (i > 0 && i < 4) {
+            ctx.beginPath()
+            ctx.rect(x + 8, y + 8, width - 16, height - 16)
+            ctx.strokeStyle = '#E87B1B'
+            ctx.stroke()
+          }
+        }
+      }
+
+      // Get in the loop:
+      // let ships = []
+      // const planets = ['Antar 4', 'Rori', 'Naboo', 'Coruscant', 'Kamino']
+
+      // for (let i = 0; i < planets.length; i++) {
+      //   console.log(planets[i])
+      // }
+
+      // for (let i = 0; i < planets.length; i++) {
+      //   ships.push('TIE Fighter ' + i)
+      // }
+      // console.log('ships:', ships)
     </script>
   </body>
 </html>
