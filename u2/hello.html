@@ -32,15 +32,17 @@
       // ctx.strokeStyle = '#E81BB6'
       // ctx.stroke()
 
+      const width = 60
+      const height = 60
+      const gap = 20
+      let x, y
+
       // Draw patterns with a loop:
       for (let i = 0; i < 5; i++) {
         // more rows:
         for (let j = 0; j < 5; j++) {
-          const width = 60
-          const height = 60
-          const gap = 20
-          const x = 100 + (width + gap) * i
-          const y = 100 + (height + gap) * j
+          x = 100 + (width + gap) * i
+          y = 100 + (height + gap) * j
 
           ctx.beginPath()
           ctx.rect(x, y, width, height)
@@ -49,27 +51,43 @@
           ctx.stroke()
 
           // Small square conditional drawing:
-          if (i > 0 && i < 4) {
+          if ( Math.random() > 0.5 ) {
             ctx.beginPath()
             ctx.rect(x + 8, y + 8, width - 16, height - 16)
-            ctx.strokeStyle = '#E87B1B'
+            ctx.strokeStyle = '#1B5FE8'
             ctx.stroke()
           }
+          // if (i > 0 && i < 4) {
+          //   ctx.beginPath()
+          //   ctx.rect(x + 8, y + 8, width - 16, height - 16)
+          //   ctx.strokeStyle = '#E87B1B'
+          //   ctx.stroke()
+          // }
         }
       }
 
+     
+
       // Get in the loop:
-      // let ships = []
-      // const planets = ['Antar 4', 'Rori', 'Naboo', 'Coruscant', 'Kamino']
+      let ships = []
+      const planets = ['Antar 4', 'Rori', 'Naboo', 'Coruscant', 'Kamino']
 
-      // for (let i = 0; i < planets.length; i++) {
-      //   console.log(planets[i])
-      // }
+      for (let i = 0; i < planets.length; i++) {
+        console.log(planets[i])
+      }
 
-      // for (let i = 0; i < planets.length; i++) {
-      //   ships.push('TIE Fighter ' + i)
-      // }
-      // console.log('ships:', ships)
+      for (let i = 0; i < planets.length; i++) {
+        ships.push('TIE Fighter ' + i)
+      }
+      console.log('ships:', ships)
+
+      planets.forEach(planet => {
+        console.log(planet)
+      })
+
+
+
+
     </script>
   </body>
 </html>
