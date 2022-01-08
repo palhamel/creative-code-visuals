@@ -1,10 +1,12 @@
 ### Labs making graphics with code - work in progress 
 
 
-- run canasSketch via command line:
+- run canvas Sketch via command line:
 
 # Run and open in browser:
-canvas-sketch src/foobar.js --open
+> canvas-sketch src/foobar.js --open
+
+Create new sketches in /sketches/
 
 # Run the development server on an existing file
 canvas-sketch src/foobar.js
