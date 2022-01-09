@@ -5,8 +5,13 @@
 
 # Run and open in browser:
 > canvas-sketch src/foobar.js --open
+> canvas-sketch [filename] --open
 
 Create new sketches in /sketches/
+
+# Connect output folder for img exports like:
+canvas-sketch sketch-02 --output=output/02
+- then 'CMD + S' to save images to output folder
 
 # Run the development server on an existing file
 canvas-sketch src/foobar.js
